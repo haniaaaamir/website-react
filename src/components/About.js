@@ -1,10 +1,14 @@
 import picture from '../images/portfoliopic.jpg';
+import flower1 from '../images/flower1.png';
+import flower2 from '../images/flower2.png';
 
 function About() {
   return (
     <section id="About" className="about-section">
+      <img src={flower1} alt="flower" className="flower flower-top-right floating rotating" />
+      <img src={flower2} alt="flower" className="flower flower-bottom-left floating rotating" />
+
       <div className="about-container">
-        
         <div className="about-image">
           <img 
             src={picture} 
@@ -22,7 +26,6 @@ function About() {
             systems, and game development. Check out some of my projects and experiences!
           </p>
         </div>
-
       </div>
     </section>
   );
