@@ -27,7 +27,7 @@ const techs = [
 function TechStack() {
   return (
     <section id="TechStack" className="tech-section">
-      <h3 className="tech-title">My Tech Stack</h3>
+      <h3 className="tech-title">Tools & Technologies</h3>
       <div className="tech-grid">
         {techs.map((tech) => (
           <div key={tech.name} className="tech-item">

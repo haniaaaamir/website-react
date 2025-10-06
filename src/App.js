@@ -13,16 +13,16 @@ function App() {
       <section id="About" className="section section-light">
         <About />
       </section>
-      <section id="Experience" className="section section-dark">
+      <section id="Experience" className="section section-light">
         <Experience />
       </section>
       <section id="Projects" className="section section-light">
         <Projects />
       </section>
-      <section id="Projects" className="section section-light">
+      <section id="TechStack" className="section section-light">
         <TechStack />
       </section>
-      <section id="Contact" className="section section-dark">
+      <section id="Contact">
         <Contact />
       </section>
     </div>

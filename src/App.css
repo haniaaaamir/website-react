@@ -4,6 +4,10 @@
   background-color: #ffe4ec;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Section styles */
 .section {
   padding: 4rem 1.5rem;
@@ -68,7 +72,7 @@ button:hover {
   background-color: #ad1457;
 }
 
-/* About picture */
+/* About */
 .about-pic {
   width: 300px;
   height: 300px;
@@ -79,20 +83,20 @@ button:hover {
 }
 
 .about-section {
-  padding: 5rem 1.5rem; /* replaces py-20 px-6 */
-  background-color: #fbcfe8; /* pink-100 equivalent */
-  position: relative; /* keeps flowers inside */
-  overflow: hidden;   /* prevents them from spilling outside */
+  padding: 5rem 1.5rem; 
+  background-color: #fadeee; 
+  position: relative; 
+  overflow: hidden;   
 }
 
 .about-container {
   display: flex;
-  justify-content: center; /* centers content horizontally */
+  justify-content: center; 
   align-items: center;
   max-width: 1120px;
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: 3rem; /* spacing between image and text */
+  gap: 3rem; 
 }
 
 .about-image img.about-pic {
@@ -101,83 +105,135 @@ button:hover {
   object-fit: cover;
   border-radius: 0%;
   display: block;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* shadow-lg */
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
   margin: 0 auto;
 }
 
 .about-text {
   text-align: left;
-  max-width: 500px; /* a little wider */
+  max-width: 500px; 
 }
 
 .about-title {
-  font-size: 2.25rem; /* slightly larger */
+  font-size: 2.25rem;
   font-weight: bold;
   color: #9d174d;
   margin-bottom: 1rem;
 }
 
 .about-description {
-  font-size: 1.1rem; /* increase text size */
+  font-size: 1.1rem; 
   color: #9d174d;
   line-height: 1.8;
 }
 
 .about-name {
-  font-weight: 600; /* font-semibold */
+  font-weight: 600; 
 }
 
-
+/* Experience */
 .experience-section {
-  padding: 5rem 1.5rem; /* replaces py-20 px-6 */
-  background-color: #f3f4f6; /* light gray similar to bg-gray-100 */
+  padding: 5rem 1.5rem; 
+  background-color: #fadeee; 
 }
 
 .experience-container {
-  max-width: 960px; /* similar to max-w-4xl */
+  max-width: 960px; 
   margin: 0 auto;
 }
 
 .experience-title {
-  font-size: 2rem; /* text-3xl */
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 3rem; /* mb-12 */
+  margin-bottom: 3rem; 
   text-align: center;
-  color: #1f2937; /* dark gray, similar to text-gray-900 */
+  color: #880e4f;
+}
+
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 192, 203, 0.8);
+  border: none;
+  font-size: 2rem;
+  color: #880e4f;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: #f48fb1;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.timeline-wrapper {
+  position: relative;
 }
 
 .timeline {
-  position: relative;
-  padding-left: 2rem; /* space for the vertical line */
-  border-left: 4px solid #ec4899; /* pink-500 */
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 2rem 0;
+  border-top: 4px solid #ec4899; 
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2.5rem; /* mb-10 */
+  flex: 0 0 auto;
+  text-align: center;
 }
 
 .timeline-dot {
-  position: absolute;
-  left: -1.3rem; /* aligns dot to left of line */
-  top: 0.25rem; /* top-1 */
-  width: 1.5rem; /* w-6 */
-  height: 1.5rem; /* h-6 */
-  background-color: #ec4899; /* pink-500 */
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ec4899;
   border-radius: 50%;
   border: 4px solid white;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 .timeline-job {
-  font-size: 1.25rem; /* text-xl */
-  font-weight: 600; /* font-semibold */
-  color: #1f2937; /* text-gray-900 */
+  font-size: 1.25rem; 
+  font-weight: 600;
+  color: #5a0028;
   margin-bottom: 0.5rem;
 }
 
 .timeline-desc {
-  color: #4b5563; /* text-gray-600 */
+  color: #9d174d; 
 }
+
 
 .resume-download {
   margin-top: 2rem;
@@ -185,7 +241,7 @@ button:hover {
 
 .download-button {
   display: inline-block;
-  background-color: #e91e63; /* same as your other buttons */
+  background-color: #e91e63; 
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
@@ -198,38 +254,10 @@ button:hover {
   background-color: #ad1457;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #be185d; /* pink-700 equivalent */
-  color: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* shadow-md */
-  z-index: 10;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem; /* space-x-10 equivalent */
-  padding: 1rem;
-}
-
-.navbar-link {
-  font-weight: 600; /* font-semibold */
-  color: white;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.navbar-link:hover {
-  color: #fda4af; /* pink-300 equivalent */
-}
-
+/* Projects */ 
 .projects-section {
   padding: 5rem 1.5rem;
-  background-color: #f3f4f6;
+  background-color: #fadeee;
 }
 
 .projects-container {
@@ -238,7 +266,7 @@ button:hover {
 }
 
 .projects-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: #880e4f;
@@ -274,7 +302,7 @@ button:hover {
 .project-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(136, 14, 79, 0.85); /* dark pink overlay */
+  background: rgba(136, 14, 79, 0.85); 
   color: white;
   display: flex;
   flex-direction: column;
@@ -302,13 +330,40 @@ button:hover {
   line-height: 1.4;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #be185d; 
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+  z-index: 10;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem; 
+  padding: 1rem;
+}
+
+.navbar-link {
+  font-weight: 600; 
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-link:hover {
+  color: #fda4af; 
+}
+
+/* Techstack */
 .tech-section {
   padding: 5rem 1.5rem;
-  background-color: #f4ddf0;
+  background-color: #fadeee;
   text-align: center;
 }
 
@@ -321,7 +376,7 @@ html {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 2rem;
   justify-items: center;
   align-items: center;
@@ -361,7 +416,7 @@ html {
   border-radius: 4px;
 
   position: absolute;
-  bottom: 100%; /* show above icon */
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 0.5rem;
@@ -378,69 +433,67 @@ html {
   opacity: 1;
 }
 
-/* Responsive: 2 columns on small screens */
 @media (max-width: 768px) {
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive: 1 column on extra small screens */
 @media (max-width: 480px) {
   .tech-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.contact-section {
-  position: relative; /* allows absolute flower positioning */
-  padding: 5rem 1.5rem;
+/* Contact/Footer */
+footer {
+  background-color: #fadeee;
+  color: rgb(160, 0, 72);
   text-align: center;
-  overflow: hidden; /* hides flowers going too far out */
+  padding: 0.2rem 1rem;
+  position: relative;
+  bottom: 0;
 }
 
-.contact-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #880e4f;
-}
-
-.contact-icons {
+.footer-icons {
   display: flex;
   justify-content: center;
-  gap: 2rem; /* space between icons */
-  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 0;
 }
 
-.contact-icon img {
-  width: 50px;
-  height: 50px;
+.footer-icon img {
+  width: 45px;
+  height: 45px;
   object-fit: contain;
-  transition: transform 0.2s, filter 0.2s;
+  transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
 }
 
-.contact-icon img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2); /* subtle hover effect */
+.footer-icon img:hover {
+  transform: scale(1.15) rotate(3deg);
+  filter: brightness(1.3);
 }
 
+.footer-text {
+  font-size: 0.9rem;
+  color: #be3366;
+}
+
+/* Flower Decoration */
 .flower {
   position: absolute;
-  width: 80px;       /* a little smaller so they blend */
-  opacity: 0.6;      /* softer look */
-  z-index: 0;        /* stay behind text/images */
+  width: 80px;       
+  opacity: 0.6;    
+  z-index: 0;        
   pointer-events: none;
 }
 
-/* Example positions (inside corners, not outside) */
 .flower-top-left { top: 20px; left: 20px; }
 .flower-top-right { top: 20px; right: 20px; }
 .flower-bottom-left { bottom: 20px; left: 20px; }
 .flower-bottom-right { bottom: 20px; right: 20px; }
 
-/* Float + rotate animation */
 @keyframes floatAndRotate {
   0%   { transform: translateY(0px) rotate(0deg); }
   25%  { transform: translateY(-10px) rotate(3deg); }
