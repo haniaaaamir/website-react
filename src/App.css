@@ -222,7 +222,6 @@ button:hover {
   display: none;
 }
 
-
 .timeline-job {
   font-size: 1.25rem; 
   font-weight: 600;
@@ -233,7 +232,6 @@ button:hover {
 .timeline-desc {
   color: #9d174d; 
 }
-
 
 .resume-download {
   margin-top: 2rem;

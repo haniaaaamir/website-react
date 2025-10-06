@@ -5,8 +5,12 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import TechStack from './components/TechStack';
 import './App.css';
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.title = "Hania Aamir";
+  }, []);
   return (
     <div className="app-container">
       <Navbar />
