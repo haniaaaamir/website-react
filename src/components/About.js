@@ -1,4 +1,4 @@
-import picture from '../images/portfoliopic.jpg';
+import picture from '../images/portfoliopic.jpeg';
 import flower1 from '../images/flower1.png';
 import flower2 from '../images/flower2.png';
 
