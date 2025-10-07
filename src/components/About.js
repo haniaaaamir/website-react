@@ -20,9 +20,8 @@ function About() {
         <div className="about-text">
           <h3 className="about-title">About Me</h3>
           <p className="about-description">
-            Hi! I'm <span className="about-name">Hania Aamir</span>, a student at the 
-            University of Calgary currently pursuing a Bachelor of Science in 
-            Software Engineering. My interests lie in web development, embedded 
+            Hi! I'm Hania Aamir, a student at the University of Calgary currently pursuing a 
+            Bachelor of Science in Software Engineering. My interests lie in web development, embedded 
             systems, and game development. Check out some of my projects and experiences!
           </p>
         </div>

@@ -67,23 +67,39 @@ function Experience() {
           >
             <div className="timeline-item">
               <div className="timeline-dot"></div>
-              <h4 className="timeline-job">GoBabyGo</h4>
-              <p className="timeline-desc">Some description here if you want.</p>
+              <div className="timeline-date">Jun 2023 - Aug 2023</div>
+              <h4 className="timeline-job">Summer Camp Counsellor @ Al-Salam Center</h4>
+              <p className="timeline-desc">Planned and led camp activities with youth aged 4-12, including Islamic Studies, gym, and arts & crafts</p>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
-              <h4 className="timeline-job">Schulich Ignite</h4>
-              <p className="timeline-desc">Some description here if you want.</p>
+              <div className="timeline-date">Oct 2024 - Dec 2024</div>
+              <h4 className="timeline-job">Original Design Team Member @ GoBabyGo</h4>
+              <p className="timeline-desc">Worked in a team to help build a wheelchair for children with mobility disabilities. Developed remote control system in C</p>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
-              <h4 className="timeline-job">CalgaryToSpace</h4>
-              <p className="timeline-desc">Some description here if you want.</p>
+              <div className="timeline-date">Oct 2024 - Dec 2024</div>
+              <h4 className="timeline-job">Python Mentor @ Schulich Ignite</h4>
+              <p className="timeline-desc">Mentored students in Python programming and marked assignments and projects</p>
             </div>
             <div className="timeline-item">
               <div className="timeline-dot"></div>
-              <h4 className="timeline-job">ReVOLT EV</h4>
-              <p className="timeline-desc">Some description here if you want.</p>
+              <div className="timeline-date">Nov 2024 - Aug 2025</div>
+              <h4 className="timeline-job">Software Team Member @ CalgaryToSpace</h4>
+              <p className="timeline-desc">Collaborated with a team to plan the development of CTS-SAT 2, gaining hands-on experience in Rust programming</p>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">Jun 2025 - Aug 2025</div>
+              <h4 className="timeline-job">Summer Camp Leader @ Ranchlands Musallah</h4>
+              <p className="timeline-desc">Planned and led camp activities with youth aged 13-18. Integrated Stripe Checkout with Flask & Python for camp payments from Jotform</p>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">Sep 2025 - Present</div>
+              <h4 className="timeline-job">Electrical/Software Team Member @ ReVOLT EV</h4>
+              <p className="timeline-desc">Collaborating with a team to build an electric motorcycle for competitions. Currently developing data logging on Raspberry Pi with Python</p>
             </div>
           </div>
           {showRightArrow && <button className="arrow right-arrow" onClick={scrollRight}>&#10095;</button>}

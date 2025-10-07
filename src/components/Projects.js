@@ -1,6 +1,6 @@
-import duelImg from '../images/duel.jpeg';
-import wordhavenImg from '../images/wordhaven.jpeg';
-import tttImg from '../images/chess.jpeg';
+import disasterRelief from '../images/disasterrelief.jpg';
+import museum from '../images/museum.jpg';
+import healthTracker from '../images/healthtracker.jpg';
 
 function Projects() {
   return (
@@ -9,31 +9,31 @@ function Projects() {
         <h3 className="projects-title">Projects</h3>
         <div className="projects-list">
           <div className="project-card">
-            <img src={duelImg} alt="Elemental Duel" className="project-image" />
+            <img src={disasterRelief} alt="Disaster Relief Service" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">Elemental Duel</h4>
+              <h4 className="project-name">Disaster Relief Service</h4>
               <p className="project-description">
-                A strategy game inspired by Pokémon Duel, rebuilt with my own twist.
+                A system built with Java and PostgreSQL to help track people, families, and aid after a disaster.             
               </p>
             </div>
           </div>
 
-          <div className="project-card">
-            <img src={wordhavenImg} alt="WordHaven" className="project-image" />
+          <a className="project-card" href="https://github.com/haniaaaamir/ensf300-final-project.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={museum} alt="Museum Database" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">WordHaven</h4>
+              <h4 className="project-name">Museum Database</h4>
               <p className="project-description">
-                A web app for readers & writers to organize books, notes, and creative ideas.
+                A project to design a relational database for managing museum exhibits and collections, featuring SQL-based tools for easy data entry, updates, and searches.
               </p>
             </div>
-          </div>
+          </a>
 
           <div className="project-card">
-            <img src={tttImg} alt="Tic Tac Toe" className="project-image" />
+            <img src={healthTracker} alt="Health Tracker" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">Tic Tac Toe</h4>
+              <h4 className="project-name">Health Tracker</h4>
               <p className="project-description">
-                My first 2D game project, exploring game logic and interactivity.
+                Building a C++ app for tracking and analyzing personal health data with charts and alerts. Currently in development. 
               </p>
             </div>
           </div>

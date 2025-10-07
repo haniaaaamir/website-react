@@ -23,7 +23,7 @@ function Contact() {
           <a href="https://github.com/haniaaaamir" target="_blank" rel="noopener noreferrer" className="footer-icon" title="GitHub">
             <img src={githubIcon} alt="GitHub" />
           </a>
-          <a href="/resume.pdf" download className="footer-icon" title="Download Resume">
+          <a href="/HaniaAamir_Resume.pdf" target="_blank" rel="noopener norefferer" className="footer-icon" title="View Resume">
             <img src={resumeIcon} alt="Resume" />
           </a>
         </div>
