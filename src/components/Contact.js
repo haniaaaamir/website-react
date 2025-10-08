@@ -27,7 +27,7 @@ function Contact() {
             <img src={resumeIcon} alt="Resume" />
           </a>
         </div>
-        <p className="footer-text">© {new Date().getFullYear()} Hania Aamir — All Rights Reserved</p>
+        <p className="footer-text">© {new Date().getFullYear()} Hania Aamir. All Rights Reserved.</p>
       </div>
     </footer>
   );

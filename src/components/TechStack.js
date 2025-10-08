@@ -9,6 +9,7 @@ import cssLogo from '../images/css.png';
 import reactLogo from '../images/react.png';
 import mysqlLogo from '../images/mysql.png';
 import pgLogo from '../images/postgresql.png';
+import qtLogo from '../images/qt.png';
 
 const techs = [
   { name: 'Java', logo: javaLogo },
@@ -22,6 +23,7 @@ const techs = [
   { name: 'React', logo: reactLogo },
   { name: 'MySQL', logo: mysqlLogo },
   { name: 'PostgreSQL', logo: pgLogo },
+  { name: 'Qt', logo: qtLogo },
 ];
 
 function TechStack() {

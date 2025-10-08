@@ -71,30 +71,49 @@ function Experience() {
               <h4 className="timeline-job">Summer Camp Counsellor @ Al-Salam Center</h4>
               <p className="timeline-desc">Planned and led camp activities with youth aged 4-12, including Islamic Studies, gym, and arts & crafts</p>
             </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">May 2024 - Present</div>
+              <h4 className="timeline-job">VP Marketing @ Robogals </h4>
+              <p className="timeline-desc">Create posters and visuals to help promote the club & volunteer with STEM-related workshops!</p>
+            </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Oct 2024 - Dec 2024</div>
               <h4 className="timeline-job">Original Design Team Member @ GoBabyGo</h4>
-              <p className="timeline-desc">Worked in a team to help build a wheelchair for children with mobility disabilities. Developed remote control system in C</p>
+              <p className="timeline-desc">Worked in a team to help build a wheelchair for children with mobility disabilities. Developed a remote control system in C</p>
             </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Oct 2024 - Dec 2024</div>
               <h4 className="timeline-job">Python Mentor @ Schulich Ignite</h4>
               <p className="timeline-desc">Mentored students in Python programming and marked assignments and projects</p>
             </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Nov 2024 - Aug 2025</div>
               <h4 className="timeline-job">Software Team Member @ CalgaryToSpace</h4>
               <p className="timeline-desc">Collaborated with a team to plan the development of CTS-SAT 2, gaining hands-on experience in Rust programming</p>
             </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Jun 2025 - Aug 2025</div>
               <h4 className="timeline-job">Summer Camp Leader @ Ranchlands Musallah</h4>
               <p className="timeline-desc">Planned and led camp activities with youth aged 13-18. Integrated Stripe Checkout with Flask & Python for camp payments from Jotform</p>
             </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-date">Jul 2025 - Present</div>
+              <h4 className="timeline-job">Third Year Rep @ ZOO (Electrical/Software Engineering Student Society)</h4>
+              <p className="timeline-desc">Representing the third year students in software engineering & relaying upcoming programs & events from ZOO!</p>
+            </div>
+
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-date">Sep 2025 - Present</div>

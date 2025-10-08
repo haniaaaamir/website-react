@@ -1,6 +1,7 @@
 import disasterRelief from '../images/disasterrelief.jpg';
 import museum from '../images/museum.jpg';
 import healthTracker from '../images/healthtracker.jpg';
+import stripe from '../images/stripe.png';
 
 function Projects() {
   return (
@@ -23,7 +24,7 @@ function Projects() {
             <div className="project-overlay">
               <h4 className="project-name">Museum Database</h4>
               <p className="project-description">
-                A project to design a relational database for managing museum exhibits and collections, featuring SQL-based tools for easy data entry, updates, and searches.
+                A project to design a relational database for managing museum exhibits and collections, made with MySQL and Python
               </p>
             </div>
           </a>
@@ -37,6 +38,16 @@ function Projects() {
               </p>
             </div>
           </div>
+
+          <a className="project-card" href="https://github.com/haniaaaamir/stripecheckout.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={stripe} alt="Stripe Checkout Form" className="project-image" />
+            <div className="project-overlay">
+              <h4 className="project-name">Stripe Checkout Form</h4>
+              <p className="project-description">
+                A custom Stripe Checkout page made using Webhooks, Flask, Python, & Render to handle camp payments from Jotform based on amount of kids & payment plan.
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </section>

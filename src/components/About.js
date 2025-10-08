@@ -22,7 +22,7 @@ function About() {
           <p className="about-description">
             Hi! I'm Hania Aamir, a student at the University of Calgary currently pursuing a 
             Bachelor of Science in Software Engineering. My interests lie in web development, embedded 
-            systems, and game development. Check out some of my projects and experiences!
+            systems, and game development. I'm passionate about using technology to solve problems, especially in the health and energy sectors. Feel free to learn more about me through my projects & experiences!
           </p>
         </div>
       </div>
