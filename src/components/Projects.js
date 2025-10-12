@@ -2,6 +2,8 @@ import disasterRelief from '../images/disasterrelief.jpg';
 import museum from '../images/museum.jpg';
 import healthTracker from '../images/healthtracker.jpg';
 import stripe from '../images/stripe.png';
+import lms from '../images/lms.png';
+import portfolio from '../images/personalwebsite.png';
 
 function Projects() {
   return (
@@ -24,7 +26,7 @@ function Projects() {
             <div className="project-overlay">
               <h4 className="project-name">Museum Database</h4>
               <p className="project-description">
-                A project to design a relational database for managing museum exhibits and collections, made with MySQL and Python
+                A group project to design a relational database for managing museum exhibits and collections, made with MySQL and Python
               </p>
             </div>
           </a>
@@ -48,6 +50,28 @@ function Projects() {
               </p>
             </div>
           </a>
+
+          <a className="project-card" href="https://github.com/haniaaaamir/ensf381-project.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={lms} alt="Learning Management System" className="project-image" />
+            <div className="project-overlay">
+              <h4 className="project-name">Learning Management System</h4>
+              <p className="project-description">
+                Collaborated with a partner to design and develop a full-stack Learning Management System. Built using HTML, CSS, JavaScript, Python, & React.
+              </p>
+            </div>
+          </a>
+
+          
+          <a className="project-card" href="https://github.com/haniaaaamir/website-react.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={portfolio} alt="Personal Website" className="project-image" />
+            <div className="project-overlay">
+              <h4 className="project-name">Personal Website</h4>
+              <p className="project-description">
+                Built a website to display my portfolio, including experience, projects, and skills. Developed using React, HTML, CSS, & JavaScript.
+              </p>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
