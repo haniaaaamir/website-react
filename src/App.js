@@ -7,12 +7,13 @@ import Contact from './components/Contact';
 import TechStack from './components/TechStack';
 import './App.css';
 
+const colors = ["#cbb4f7", "#b4c7f7", "#ffa4a4", "#fbb4c7"];
+
 function App() {
   const [scrollY, setScrollY] = useState(0);
   const [showNavbar, setShowNavbar] = useState(true);
 
   const orbCount = 15;
-  const colors = ["#cbb4f7", "#b4c7f7", "#ffa4a4", "#fbb4c7"];
 
   const orbs = useRef(
     Array.from({ length: orbCount }, () => ({
@@ -28,13 +29,10 @@ function App() {
   );
 
   useEffect(() => {
-    let lastScroll = 0;
-
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       setScrollY(currentScroll);
       setShowNavbar(currentScroll < 50);
-      lastScroll = currentScroll;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

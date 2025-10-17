@@ -38,6 +38,7 @@ html {
   scroll-margin-top: 70px;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;           
   top: 1rem;               
@@ -90,6 +91,7 @@ button:hover {
   background-color: #ad1457;
 }
 
+/* About */
 .about-pic {
   width: 300px;
   height: 300px;
@@ -150,6 +152,7 @@ button:hover {
   line-height: 1.8;
 }
 
+/* Experience */
 .experience-section {
   padding: 1rem 1.5rem; 
   background: transparent;
@@ -256,6 +259,7 @@ button:hover {
   max-width: 220px;
 }
 
+/* Projects */
 .projects-section {
   padding: 0.5rem 1.5rem;
   background: transparent;
@@ -333,6 +337,7 @@ button:hover {
   line-height: 1.4;
 }
 
+/* TechStack */
 .tech-section {
   padding: 5rem 1.5rem;
   background: transparent;
@@ -415,6 +420,7 @@ button:hover {
   }
 }
 
+/* Footer/Contact */
 footer {
   background-color: #b51258;
   color: white;
@@ -439,7 +445,7 @@ footer {
 
 .footer-title {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #ffe4fa;
 }
 
 .footer-icons {
@@ -486,6 +492,7 @@ footer {
   background-color: #ad1457;
 }
 
+/* Flowers */
 .flower {
   position: absolute;
   width: 80px;       
@@ -509,6 +516,7 @@ footer {
   animation: floatAndRotate 5s ease-in-out infinite;
 }
 
+/* Background orbs */
 .orb {
   position: fixed;
   border-radius: 50%;
