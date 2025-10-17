@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -5,31 +6,88 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import TechStack from './components/TechStack';
 import './App.css';
-import { useEffect } from "react";
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(true);
+
+  const orbCount = 15;
+  const colors = ["#cbb4f7", "#b4c7f7", "#ffa4a4", "#fbb4c7"];
+
+  const orbs = useRef(
+    Array.from({ length: orbCount }, () => ({
+      top: Math.random() * window.innerHeight,
+      left: Math.random() * window.innerWidth,
+      size: 100 + Math.random() * 120,
+      speedX: (Math.random() * 0.6) - 0.3,
+      speedY: (Math.random() * 0.6) - 0.3,
+      rotation: Math.random() * 360,
+      rotationSpeed: (Math.random() * 0.2) - 0.1,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    }))
+  );
+
   useEffect(() => {
-    document.title = "Hania Aamir";
+    let lastScroll = 0;
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setScrollY(currentScroll);
+      setShowNavbar(currentScroll < 50);
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    let frame;
+    const animateOrbs = () => {
+      orbs.current.forEach(orb => {
+        orb.top += orb.speedY;
+        orb.left += orb.speedX;
+        orb.rotation += orb.rotationSpeed;
+
+        if (orb.top > window.innerHeight || orb.top < 0) orb.speedY *= -1;
+        if (orb.left > window.innerWidth || orb.left < 0) orb.speedX *= -1;
+
+        if (Math.random() < 0.002) {
+          orb.color = colors[Math.floor(Math.random() * colors.length)];
+        }
+      });
+      frame = requestAnimationFrame(animateOrbs);
+    };
+    animateOrbs();
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   return (
-    <div className="app-container">
-      <Navbar />
-      <section id="About" className="section section-light">
-        <About />
-      </section>
-      <section id="Experience" className="section section-light">
-        <Experience />
-      </section>
-      <section id="Projects" className="section section-light">
-        <Projects />
-      </section>
-      <section id="TechStack" className="section section-light">
-        <TechStack />
-      </section>
-      <section id="Contact">
+    <>
+      {orbs.current.map((orb, i) => (
+        <div
+          key={i}
+          className="orb"
+          style={{
+            top: orb.top,
+            left: orb.left,
+            width: `${orb.size}px`,
+            height: `${orb.size}px`,
+            background: orb.color,
+            transform: `translate(-50%, -50%) rotate(${orb.rotation}deg) translateY(${scrollY * 0.03}px)`
+          }}
+        />
+      ))}
+
+      <div className={`app-container ${showNavbar ? "" : "hide-navbar"}`}>
+        <Navbar />
+        <section id="About" className="section section-full"><About /></section>
+        <section id="Experience" className="section section-full"><Experience /></section>
+        <section id="Projects" className="section section-full"><Projects /></section>
+        <section id="TechStack" className="section section-full"><TechStack /></section>
         <Contact />
-      </section>
-    </div>
+      </div>
+    </>
   );
 }
 

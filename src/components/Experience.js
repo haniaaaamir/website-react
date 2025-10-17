@@ -35,7 +35,7 @@ function Experience() {
       if (hoverX !== null) {
         const rect = timeline.getBoundingClientRect();
         const width = rect.width;
-        const speed = 4;
+        const speed = 10;
         if (hoverX < width * 0.2) timeline.scrollLeft -= speed;
         else if (hoverX > width * 0.8) timeline.scrollLeft += speed;
       }
