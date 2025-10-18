@@ -1,7 +1,7 @@
 import javaLogo from '../images/java.png';
 import cLogo from '../images/c.png';
 import cppLogo from '../images/cpp.png';
-import csharpLogo from '../images/csharp.png';
+import tsLogo from '../images/typescript.png';
 import pythonLogo from '../images/python.png';
 import jsLogo from '../images/javascript.png';
 import htmlLogo from '../images/html.png';
@@ -9,20 +9,24 @@ import cssLogo from '../images/css.png';
 import reactLogo from '../images/react.png';
 import mysqlLogo from '../images/mysql.png';
 import pgLogo from '../images/postgresql.png';
+import nodejs from '../images/nodejs.png';
+import jupyter from '../images/jupyter.png';
 import qtLogo from '../images/qt.png';
 
 const techs = [
   { name: 'Java', logo: javaLogo },
   { name: 'C', logo: cLogo },
   { name: 'C++', logo: cppLogo },
-  { name: 'C#', logo: csharpLogo },
   { name: 'Python', logo: pythonLogo },
   { name: 'JavaScript', logo: jsLogo },
+  { name: 'TypeScript', logo: tsLogo },
   { name: 'HTML', logo: htmlLogo },
   { name: 'CSS', logo: cssLogo },
   { name: 'React', logo: reactLogo },
   { name: 'MySQL', logo: mysqlLogo },
   { name: 'PostgreSQL', logo: pgLogo },
+  { name: 'Node.js', logo: nodejs },
+  { name: 'Jupyter', logo: jupyter },
   { name: 'Qt', logo: qtLogo },
 ];
 

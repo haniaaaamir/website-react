@@ -3,7 +3,7 @@ import museum from '../images/museum.jpg';
 import healthTracker from '../images/healthtracker.jpg';
 import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
-import portfolio from '../images/personalwebsite.png';
+import lanternLibrary from '../images/lanternlibrary.jpg';
 
 function Projects() {
   return (
@@ -62,12 +62,12 @@ function Projects() {
           </a>
 
           
-          <a className="project-card" href="https://github.com/haniaaaamir/website-react.git" target ="_blank" rel="noopener noreferrer" >
-            <img src={portfolio} alt="Personal Website" className="project-image" />
+          <a className="project-card" href="https://github.com/haniaaaamir/the-lantern-library.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={lanternLibrary} alt="Personal Website" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">Personal Website</h4>
+              <h4 className="project-name">The Lantern Library</h4>
               <p className="project-description">
-                Built a website to display my portfolio, including experience, projects, and skills. Developed using React, HTML, CSS, & JavaScript.
+                A book-search web app built with React, TypeScript, CSS and the Google Books API. It lets you explore, preview, and save your favorite reads!
               </p>
             </div>
           </a>
