@@ -55,8 +55,7 @@ function Experience() {
   return (
     <section id="Experience" className="experience-section">
       <div className="experience-container">
-        <h3 className="experience-title">Experience</h3>
-
+        <h1 className="experience-title">Experience</h1>
         <div className="timeline-wrapper">
           {showLeftArrow && <button className="arrow left-arrow" onClick={scrollLeft}>&#10094;</button>}
           <div

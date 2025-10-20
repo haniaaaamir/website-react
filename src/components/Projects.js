@@ -4,12 +4,14 @@ import healthTracker from '../images/healthtracker.jpg';
 import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
 import lanternLibrary from '../images/lanternlibrary.jpg';
+import githubIcon from '../images/github.png';
 
 function Projects() {
   return (
     <section id="Projects" className="projects-section">
       <div className="projects-container">
-        <h3 className="projects-title">Projects</h3>
+        <h1 className="projects-title">Projects
+        <a href="https://github.com/haniaaaamir" target="_blank" rel="noopener noreferrer" className="github-link"><img src={githubIcon} alt="GitHub" className="github-icon"/></a></h1>
         <div className="projects-list">
           <div className="project-card">
             <img src={disasterRelief} alt="Disaster Relief Service" className="project-image" />

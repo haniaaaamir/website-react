@@ -33,7 +33,7 @@ const techs = [
 function TechStack() {
   return (
     <section id="TechStack" className="tech-section">
-      <h3 className="tech-title">Tools & Technologies</h3>
+      <h1 className="tech-title">Tools & Technologies</h1>
       <div className="tech-grid">
         {techs.map((tech) => (
           <div key={tech.name} className="tech-item">
