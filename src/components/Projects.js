@@ -1,6 +1,6 @@
 import disasterRelief from '../images/disasterrelief.jpg';
 import museum from '../images/museum.jpg';
-import healthTracker from '../images/healthtracker.jpg';
+{/*import healthTracker from '../images/healthtracker.jpg';*/}
 import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
 import lanternLibrary from '../images/lanternlibrary.jpg';
