@@ -1,6 +1,5 @@
 import disasterRelief from '../images/disasterrelief.jpg';
 import museum from '../images/museum.jpg';
-{/*import healthTracker from '../images/healthtracker.jpg';*/}
 import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
 import lanternLibrary from '../images/lanternlibrary.jpg';
@@ -33,17 +32,6 @@ function Projects() {
               </p>
             </div>
           </a>
-
-          {/* Will update once completed */}
-          {/*<div className="project-card">
-            <img src={healthTracker} alt="Health Tracker" className="project-image" />
-            <div className="project-overlay">
-              <h4 className="project-name">Health Tracker</h4>
-              <p className="project-description">
-                Building a C++ app for tracking and analyzing personal health data with charts and alerts. Currently in development. 
-              </p>
-            </div>
-          </div>*/} 
 
           <a className="project-card" href="https://github.com/haniaaaamir/stripecheckout.git" target ="_blank" rel="noopener noreferrer" >
             <img src={stripe} alt="Stripe Checkout Form" className="project-image" />
