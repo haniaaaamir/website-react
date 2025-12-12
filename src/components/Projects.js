@@ -5,6 +5,7 @@ import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
 import lanternLibrary from '../images/lanternlibrary.jpg';
 import githubIcon from '../images/github.png';
+import flightSystem from '../images/flightreservationsystem.jpg';
 
 function Projects() {
   return (
@@ -33,7 +34,8 @@ function Projects() {
             </div>
           </a>
 
-          <div className="project-card">
+          {/* Will update once completed */}
+          {/*<div className="project-card">
             <img src={healthTracker} alt="Health Tracker" className="project-image" />
             <div className="project-overlay">
               <h4 className="project-name">Health Tracker</h4>
@@ -41,7 +43,7 @@ function Projects() {
                 Building a C++ app for tracking and analyzing personal health data with charts and alerts. Currently in development. 
               </p>
             </div>
-          </div>
+          </div>*/} 
 
           <a className="project-card" href="https://github.com/haniaaaamir/stripecheckout.git" target ="_blank" rel="noopener noreferrer" >
             <img src={stripe} alt="Stripe Checkout Form" className="project-image" />
@@ -70,6 +72,16 @@ function Projects() {
               <h4 className="project-name">The Lantern Library</h4>
               <p className="project-description">
                 A book-search web app built with React, TypeScript, CSS and the Google Books API. It lets you explore, preview, and save your favorite reads!
+              </p>
+            </div>
+          </a>
+
+          <a className="project-card" href="https://github.com/haniaaaamir/ensf480_termproject" target ="_blank" rel="noopener noreferrer" >
+            <img src={flightSystem} alt="Flight Reservation System" className="project-image" />
+            <div className="project-overlay">
+              <h4 className="project-name">Flight Reservation System</h4>
+              <p className="project-description">
+                An airline booking application that allows users to browse flights, create accounts, log in, book flights, make payments, and manage reservations. Built with Java and MySQL.
               </p>
             </div>
           </a>
