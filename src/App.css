@@ -91,6 +91,12 @@ button:hover {
   background-color: #ad1457;
 }
 
+.about-title.header-title {
+  font-size: clamp(4.5rem, 10vw, 9rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
 /* About */
 .about-pic {
   width: 200px;

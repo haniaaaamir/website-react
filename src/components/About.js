@@ -13,7 +13,7 @@ function About() {
         </div>
 
         <div className="about-text">
-          <h3 className="about-title">Hania Aamir</h3>
+          <h3 className="about-title">About Me</h3>
           <p className="about-description">
             Hi! I'm currently a third-year student at the University of Calgary currently pursuing a 
             Bachelor of Science in Software Engineering. My interests lie in web development, data  

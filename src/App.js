@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Header from './components/Header';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -79,6 +80,7 @@ function App() {
 
       <div className={`app-container ${showNavbar ? "" : "hide-navbar"}`}>
         <Navbar />
+        <section id="" className="section section-full"><Header /></section>
         <section id="About" className="section section-full"><About /></section>
         <section id="Experience" className="section section-full"><Experience /></section>
         <section id="Projects" className="section section-full"><Projects /></section>
