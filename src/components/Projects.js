@@ -1,24 +1,24 @@
-import disasterRelief from '../images/disasterrelief.jpg';
 import museum from '../images/museum.jpg';
 import stripe from '../images/stripe.png';
 import lms from '../images/lms.png';
-import lanternLibrary from '../images/lanternlibrary.jpg';
 import githubIcon from '../images/github.png';
 import flightSystem from '../images/flightreservationsystem.jpg';
+import snakesAndLadders from '../images/snakesandladders.png';
+import smartTravelPlanner from '../images/travelplanner.png';
 
 function Projects() {
   return (
     <section id="Projects" className="projects-section">
       <div className="projects-container">
         <h1 className="projects-title">Projects
-        <a href="https://github.com/haniaaaamir" target="_blank" rel="noopener noreferrer" className="github-link"><img src={githubIcon} alt="GitHub" className="github-icon"/></a></h1>
+        <a href="https://github.com/haniaaaamir/3D-Snakes-And-Ladders.git" target="_blank" rel="noopener noreferrer" className="github-link"><img src={githubIcon} alt="GitHub" className="github-icon"/></a></h1>
         <div className="projects-list">
           <div className="project-card">
-            <img src={disasterRelief} alt="Disaster Relief Service" className="project-image" />
+            <img src={snakesAndLadders} alt="3D Snakes & Ladders" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">Disaster Relief Service</h4>
+              <h4 className="project-name">3D Snakes and Ladders</h4>
               <p className="project-description">
-                A system built with Java and PostgreSQL to help track people, families, and aid after a disaster.             
+                An educational version of the classic Snakes and Ladders game, built with C# and Unity in a team          
               </p>
             </div>
           </div>
@@ -26,7 +26,7 @@ function Projects() {
           <a className="project-card" href="https://github.com/haniaaaamir/ensf300-final-project.git" target ="_blank" rel="noopener noreferrer" >
             <img src={museum} alt="Museum Database" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">Museum Database</h4>
+              <h4 className="project-name">Museum Database Management System</h4>
               <p className="project-description">
                 A group project to design a relational database for managing museum exhibits and collections, made with MySQL and Python
               </p>
@@ -54,12 +54,12 @@ function Projects() {
           </a>
 
           
-          <a className="project-card" href="https://github.com/haniaaaamir/the-lantern-library.git" target ="_blank" rel="noopener noreferrer" >
-            <img src={lanternLibrary} alt="Personal Website" className="project-image" />
+          <a className="project-card" href="https://github.com/haniaaaamir/Smart-Travel-Planner.git" target ="_blank" rel="noopener noreferrer" >
+            <img src={smartTravelPlanner} alt="Smart Travel Planner" className="project-image" />
             <div className="project-overlay">
-              <h4 className="project-name">The Lantern Library</h4>
+              <h4 className="project-name">Smart Travel Planner</h4>
               <p className="project-description">
-                A book-search web app built with React, TypeScript, CSS and the Google Books API. It lets you explore, preview, and save your favorite reads!
+                A web application made by a group of five designed to simplify trip planning by generating personalized, day-by-day itineraries using an LLM. Built with JavaScript, Python, and Flask.
               </p>
             </div>
           </a>

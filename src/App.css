@@ -100,9 +100,8 @@ button:hover {
 /* About */
 .about-pic {
   width: 200px;
-  height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20%;
   display: block;
   margin: 0 auto;
 }
@@ -126,12 +125,13 @@ button:hover {
 
 .about-image img.about-pic {
   width: 330px;
-  height: 330px;
+  height: 390px;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 2%;
   display: block;
   box-shadow: 0 10px 15px rgba(0,0,0,0.1); 
   margin: 0 auto;
+  margin-top: 70px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 

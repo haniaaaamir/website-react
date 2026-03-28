@@ -10,7 +10,7 @@ function Navbar() {
         <span onClick={() => scrollToSection("Experience")} className="navbar-link">Experience</span>
         <span onClick={() => scrollToSection("Projects")} className="navbar-link">Projects</span>
         <span onClick={() => scrollToSection("TechStack")} className="navbar-link">Skills</span>
-        <a href="/HaniaAamir_Resume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-link" title="View Resume">Resume</a>
+        <a href="/HaniaAamirResume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-link" title="View Resume">Resume</a>
       </div>
     </nav>
   );

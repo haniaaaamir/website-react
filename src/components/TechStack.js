@@ -11,23 +11,31 @@ import mysqlLogo from '../images/mysql.png';
 import pgLogo from '../images/postgresql.png';
 import nodejs from '../images/nodejs.png';
 import jupyter from '../images/jupyter.png';
-import qtLogo from '../images/qt.png';
+import csharp from '../images/csharp.png';
+import unity from '../images/unity.png';
+import eclipse from '../images/eclipse.png';
+import tailwindcss from '../images/tailwindcss.png';
+import selenium from '../images/selenium.png';
 
 const techs = [
   { name: 'Java', logo: javaLogo },
   { name: 'C', logo: cLogo },
   { name: 'C++', logo: cppLogo },
+  { name: 'C#', logo: csharp },
   { name: 'Python', logo: pythonLogo },
   { name: 'JavaScript', logo: jsLogo },
   { name: 'TypeScript', logo: tsLogo },
   { name: 'HTML', logo: htmlLogo },
   { name: 'CSS', logo: cssLogo },
+  { name: 'Tailwind CSS', logo: tailwindcss },
   { name: 'React', logo: reactLogo },
   { name: 'MySQL', logo: mysqlLogo },
   { name: 'PostgreSQL', logo: pgLogo },
   { name: 'Node.js', logo: nodejs },
   { name: 'Jupyter', logo: jupyter },
-  { name: 'Qt', logo: qtLogo },
+  { name: 'Eclipse', logo: eclipse },
+  { name: 'Selenium', logo: selenium },
+  { name: 'Unity', logo: unity }
 ];
 
 function TechStack() {
