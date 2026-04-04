@@ -11,9 +11,9 @@ function Projects() {
     <section id="Projects" className="projects-section">
       <div className="projects-container">
         <h1 className="projects-title">Projects
-        <a href="https://github.com/haniaaaamir/3D-Snakes-And-Ladders.git" target="_blank" rel="noopener noreferrer" className="github-link"><img src={githubIcon} alt="GitHub" className="github-icon"/></a></h1>
+        <a href="https://github.com/haniaaaamir/" target="_blank" rel="noopener noreferrer" className="github-link"><img src={githubIcon} alt="GitHub" className="github-icon"/></a></h1>
         <div className="projects-list">
-          <div className="project-card">
+          <a div className="project-card" href="https://github.com/haniaaaamir/3D-Snakes-And-Ladders.git" target ="_blank" rel="noopener noreferrer">
             <img src={snakesAndLadders} alt="3D Snakes & Ladders" className="project-image" />
             <div className="project-overlay">
               <h4 className="project-name">3D Snakes and Ladders</h4>
@@ -21,7 +21,7 @@ function Projects() {
                 An educational version of the classic Snakes and Ladders game, built with C# and Unity in a team          
               </p>
             </div>
-          </div>
+          </a>
 
           <a className="project-card" href="https://github.com/haniaaaamir/ensf300-final-project.git" target ="_blank" rel="noopener noreferrer" >
             <img src={museum} alt="Museum Database" className="project-image" />
