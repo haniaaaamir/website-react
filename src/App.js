@@ -21,10 +21,10 @@ function App() {
       top: Math.random() * window.innerHeight,
       left: Math.random() * window.innerWidth,
       size: 100 + Math.random() * 120,
-      speedX: (Math.random() * 4.8) - 2.4,
-      speedY: (Math.random() * 4.8) - 2.4,
+      speedX: (Math.random() * 4) - 4,
+      speedY: (Math.random() * 4) - 4,
       rotation: Math.random() * 360,
-      rotationSpeed: (Math.random() * 0.8) - 0.4,
+      rotationSpeed: (Math.random() * 4) - 4,
       color: colors[Math.floor(Math.random() * colors.length)]
     }))
   );
@@ -51,7 +51,7 @@ function App() {
         if (orb.top > window.innerHeight || orb.top < 0) orb.speedY *= -1;
         if (orb.left > window.innerWidth || orb.left < 0) orb.speedX *= -1;
 
-        if (Math.random() < 0.01) {
+        if (Math.random() < 0.03) {
           orb.color = colors[Math.floor(Math.random() * colors.length)];
         }
       });

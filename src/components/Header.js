@@ -23,7 +23,7 @@ const Header = () => {
     <section className="section-full about-section">
       <div
         style={{
-          minHeight: "60vh",
+          minHeight: "85vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

@@ -13,13 +13,13 @@ function About() {
         </div>
 
         <div className="about-text">
-          <h3 className="about-title">About Me</h3>
+          <h3 className="about-title">hello, world. it's me.</h3>
           <p className="about-description">
-            Hi! I'm currently a third-year student at the University of Calgary currently pursuing a 
-            Bachelor of Science in Software Engineering. My interests lie in web development, data  
-            analytics, and game development. I'm passionate about using technology to solve problems, especially in the health and energy sectors.
-            I love creating new things that bridge my passions and studies! 
-            <p>Check out some of my projects and experiences!</p>
+            <p>I'm a third-year Software Engineering student passionate about turning ideas into reality. 
+            Whether it's a website, a game, or a new way to solve a problem, I love experimenting, learning, and seeing what I can make. 
+            Feel free to take a look to see what I have been up to!
+            </p>
+
           </p>
         </div>
       </div>

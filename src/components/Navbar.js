@@ -6,15 +6,17 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <span onClick={() => scrollToSection("About")} className="navbar-link">About</span>
-        <span onClick={() => scrollToSection("Experience")} className="navbar-link">Experience</span>
-        <span onClick={() => scrollToSection("Projects")} className="navbar-link">Projects</span>
-        <span onClick={() => scrollToSection("TechStack")} className="navbar-link">Skills</span>
-        <a href="/HaniaAamirResume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-link" title="View Resume">Resume</a>
+        <span className="navbar-name">Hania Aamir</span>
+        <div className="navbar-items">
+          <span onClick={() => scrollToSection("About")} className="navbar-link">About</span>
+          <span onClick={() => scrollToSection("Experience")} className="navbar-link">Experience</span>
+          <span onClick={() => scrollToSection("Projects")} className="navbar-link">Projects</span>
+          <span onClick={() => scrollToSection("TechStack")} className="navbar-link">Skills</span>
+          <a href="/HaniaAamirResume.pdf" target="_blank" rel="noopener noreferrer" className="navbar-link" title="View Resume">Resume</a>
+        </div>
       </div>
     </nav>
   );
 }
-
 
 export default Navbar;

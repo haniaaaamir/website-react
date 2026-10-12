@@ -1,126 +1,134 @@
 import { useEffect, useRef, useState } from "react";
 
+const experiences = [
+  {
+    date: "May 2025 - Present",
+    job: "Engineering Co-op Student",
+    organization: "ATCO Gas & Pipelines",
+    description:
+      "Building new tools and automations, support enhancements and maintain existing tools.",
+  },
+  {
+    date: "Sep 2025 - Present",
+    job: "Electrical/Software Team Member",
+    organization: "ReVOLT EV",
+    description:
+      "Collaborating with a team to build an electric motorcycle for competitions. Currently developing data logging on Raspberry Pi with Python.",
+  },
+  {
+    date: "Jul 2025 - April 2026",
+    job: "Third Year Rep",
+    organization:
+      "ZOO (Electrical/Software Engineering Student Society)",
+    description:
+      "Representing third-year students in software engineering and relaying upcoming programs and events from ZOO!",
+  },
+  {
+    date: "Jun 2025 - Aug 2025",
+    job: "Summer Camp Leader",
+    organization: "Ranchlands Musallah",
+    description:
+      "Planned and led camp activities with youth aged 13-18. Integrated Stripe Checkout with Flask and Python for camp payments from Jotform.",
+  },
+  {
+    date: "Nov 2024 - Aug 2025",
+    job: "Software Team Member",
+    organization: "CalgaryToSpace",
+    description:
+      "Collaborated with a team to plan the development of CTS-SAT 2, gaining hands-on experience in Rust programming.",
+  },
+  {
+    date: "Oct 2024 - Dec 2024",
+    job: "Python Mentor",
+    organization: "Schulich Ignite",
+    description:
+      "Mentored students in Python programming and marked assignments and projects.",
+  },
+  {
+    date: "Oct 2024 - Dec 2024",
+    job: "Original Design Team Member",
+    organization: "GoBabyGo",
+    description:
+      "Worked in a team to help build a wheelchair for children with mobility disabilities. Developed a remote control system in C.",
+  },
+  {
+    date: "May 2024 - May 2026",
+    job: "VP Marketing",
+    organization: "Robogals",
+    description:
+      "Create posters and visuals to help promote the club and volunteer with STEM-related workshops!",
+  },
+];
+
 function Experience() {
-  const timelineRef = useRef(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(true);
-  const [hoverX, setHoverX] = useState(null);
+  const [visibleItems, setVisibleItems] = useState([]);
+  const itemRefs = useRef([]);
 
   useEffect(() => {
-    const timeline = timelineRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.dataset.index);
 
-    const updateArrows = () => {
-      setShowLeftArrow(timeline.scrollLeft > 0);
-      setShowRightArrow(
-        timeline.scrollLeft < timeline.scrollWidth - timeline.clientWidth - 1
-      );
-    };
+            setVisibleItems((previous) =>
+              previous.includes(index)
+                ? previous
+                : [...previous, index]
+            );
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-    const handleScroll = () => updateArrows();
-    timeline.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", updateArrows);
-    updateArrows();
+    itemRefs.current.forEach((item) => {
+      if (item) observer.observe(item);
+    });
 
-    return () => {
-      timeline.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", updateArrows);
-    };
+    return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    let animationFrame;
-
-    const scrollTimeline = () => {
-      const timeline = timelineRef.current;
-      if (hoverX !== null) {
-        const rect = timeline.getBoundingClientRect();
-        const width = rect.width;
-        const speed = 10;
-        if (hoverX < width * 0.2) timeline.scrollLeft -= speed;
-        else if (hoverX > width * 0.8) timeline.scrollLeft += speed;
-      }
-      animationFrame = requestAnimationFrame(scrollTimeline);
-    };
-
-    scrollTimeline();
-    return () => cancelAnimationFrame(animationFrame);
-  }, [hoverX]);
-
-  const handleMouseMove = (e) => setHoverX(e.clientX - timelineRef.current.getBoundingClientRect().left);
-  const handleMouseLeave = () => setHoverX(null);
-
-  const scrollLeft = () => timelineRef.current.scrollBy({ left: -300, behavior: "smooth" });
-  const scrollRight = () => timelineRef.current.scrollBy({ left: 300, behavior: "smooth" });
 
   return (
     <section id="Experience" className="experience-section">
       <div className="experience-container">
-        <h1 className="experience-title">Experience</h1>
-        <div className="timeline-wrapper">
-          {showLeftArrow && <button className="arrow left-arrow" onClick={scrollLeft}>&#10094;</button>}
-          <div
-            ref={timelineRef}
-            className="timeline no-scrollbar"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Jun 2023 - Aug 2023</div>
-              <h4 className="timeline-job">Summer Camp Counsellor @ Al-Salam Center</h4>
-              <p className="timeline-desc">Planned and led camp activities with youth aged 4-12, including Islamic Studies, gym, and arts & crafts</p>
-            </div>
+        <h1 className="experience-title">experience</h1>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">May 2024 - Present</div>
-              <h4 className="timeline-job">VP Marketing @ Robogals </h4>
-              <p className="timeline-desc">Create posters and visuals to help promote the club & volunteer with STEM-related workshops!</p>
-            </div>
+        <div className="vertical-timeline">
+          {experiences.map((experience, index) => (
+            <div
+              key={`${experience.organization}-${index}`}
+              ref={(element) => {
+                itemRefs.current[index] = element;
+              }}
+              data-index={index}
+              className={`experience-item ${
+                visibleItems.includes(index) ? "visible" : ""
+              }`}
+            >
+              <div className="timeline-marker">
+                <div className="timeline-dot" />
+              </div>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Oct 2024 - Dec 2024</div>
-              <h4 className="timeline-job">Original Design Team Member @ GoBabyGo</h4>
-              <p className="timeline-desc">Worked in a team to help build a wheelchair for children with mobility disabilities. Developed a remote control system in C</p>
-            </div>
+              <article className="experience-card">
+                <span className="experience-date">
+                  {experience.date}
+                </span>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Oct 2024 - Dec 2024</div>
-              <h4 className="timeline-job">Python Mentor @ Schulich Ignite</h4>
-              <p className="timeline-desc">Mentored students in Python programming and marked assignments and projects</p>
-            </div>
+                <h3 className="timeline-job">
+                  {experience.job}
+                </h3>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Nov 2024 - Aug 2025</div>
-              <h4 className="timeline-job">Software Team Member @ CalgaryToSpace</h4>
-              <p className="timeline-desc">Collaborated with a team to plan the development of CTS-SAT 2, gaining hands-on experience in Rust programming</p>
-            </div>
+                <h4 className="experience-organization">
+                  @ {experience.organization}
+                </h4>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Jun 2025 - Aug 2025</div>
-              <h4 className="timeline-job">Summer Camp Leader @ Ranchlands Musallah</h4>
-              <p className="timeline-desc">Planned and led camp activities with youth aged 13-18. Integrated Stripe Checkout with Flask & Python for camp payments from Jotform</p>
+                <p className="timeline-desc">
+                  {experience.description}
+                </p>
+              </article>
             </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Jul 2025 - Present</div>
-              <h4 className="timeline-job">Third Year Rep @ ZOO (Electrical/Software Engineering Student Society)</h4>
-              <p className="timeline-desc">Representing the third year students in software engineering & relaying upcoming programs & events from ZOO!</p>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-date">Sep 2025 - Present</div>
-              <h4 className="timeline-job">Electrical/Software Team Member @ ReVOLT EV</h4>
-              <p className="timeline-desc">Collaborating with a team to build an electric motorcycle for competitions. Currently developing data logging on Raspberry Pi with Python</p>
-            </div>
-          </div>
-          {showRightArrow && <button className="arrow right-arrow" onClick={scrollRight}>&#10095;</button>}
+          ))}
         </div>
       </div>
     </section>
